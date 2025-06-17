@@ -9,7 +9,7 @@ export function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 p-4">
       <div className="flex flex-col items-center max-w-md w-full">
-        <h1 className="text-2xl font-bold mb-6 text-center">4-7-8 Breathing Exercise</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center text-white">4-7-8 Breathing Exercise</h1>
         
         <BreathingCircle 
           phase={state.phase} 

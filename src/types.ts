@@ -1,3 +1,4 @@
+// Breathing Exercise Types
 export type BreathingPhase = 'inhale' | 'hold' | 'exhale' | 'idle';
 
 export interface BreathingTimerState {
@@ -24,4 +25,46 @@ export interface ControlPanelProps {
 export interface ProgressInfoProps {
   cycleCount: number;
   timeRemaining: number;
+}
+
+// Workout Planner Types
+export interface FormData {
+  muscleGroup: string;
+  difficulty: string;
+}
+
+export interface Exercise {
+  name: string;
+  instructions: string;
+  reps?: string;
+  sets?: string;
+  muscle?: string;
+  equipment?: string;
+  difficulty?: string;
+  type?: string;
+}
+
+export interface EnhancedExercise extends Exercise {
+  id: string;
+  aiInsights?: string;
+  properForm?: string[];
+  commonMistakes?: string[];
+  variations?: string[];
+  targetMuscles?: string[];
+  benefits?: string[];
+  safetyTips?: string[];
+}
+
+export interface WorkoutRoutine {
+  exercises: EnhancedExercise[];
+  totalDuration?: number;
+  tips?: string[];
+  aiDescription?: string;
+  targetGoals?: string[];
+  estimatedCalories?: number;
+}
+
+export interface DetailedWorkoutView {
+  exercise: EnhancedExercise;
+  isVisible: boolean;
 }
