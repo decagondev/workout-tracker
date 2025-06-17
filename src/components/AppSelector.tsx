@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Heart, Dumbbell } from 'lucide-react';
 
 type AppType = 'breathing' | 'workout';

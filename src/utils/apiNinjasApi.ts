@@ -61,8 +61,8 @@ export async function fetchExercises(formData: FormData): Promise<Exercise[]> {
         } else {
           console.error(`API-Ninjas HTTP error for ${muscle}:`, response.status, response.statusText);
         }
-      } catch (error) {
-        console.error(`Error fetching exercises for ${muscle}:`, error);
+      } catch (innerError) {
+        console.error(`Error fetching exercises for ${muscle}:`, innerError);
       }
       
       // Break if we have enough exercises
